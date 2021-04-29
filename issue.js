@@ -1,6 +1,4 @@
-var tableData=[
-                                             
-                        
+var tableData=[               
                      {
                          "counts": 82,
                          "title": "쿠팡",
@@ -51,8 +49,6 @@ var tableData=[
                          "title": "아이돌",
                           "rank" :"10",
                      },
-                   
-
             ]
 
             buildTable(tableData)

@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- 아래 link부터 script 부분 JS-->    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<style type="text/css">
+
+</style> 
+<!-- img로고  -->
+<style>
+  img{float: left;}   
+  .p2{clear: both;}
+  img{margin: 5px;}
+   
+      div.left {
+        width: 300px;
+        max-height: 100%;
+        margin: auto;
+        float: left;
+        box-sizing: border-box;
+       
+      }
+      div.right {
+        width: 700px;
+        height: auto;
+        margin: auto;
+        float: right;
+        box-sizing: border-box;
+        
+      }
+      .my-box{width:1300px; max-height: 100%;}
+      .my-box2{width: auto; max-height: 100%; margin: auto;}
+
+        
+</style>
+
+  </head>
+
+  <body style="background-color:#35363a; color: white;"> 
+
+    <div class="container">
+      
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color:white;">실시간 검색어</a>
+    </div>
+  </nav>
+</div>
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+   
+    </div>
+
+
+     <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="my-box">
+          <div class="left">
+           <h1 id="title">검색어 순위</h1>
+           <table class="table table-bordered">
+             <thead>
+               <tr class="bg-info">
+                 <th>rank</th>
+                 <th>title</th>
+                 <th>counts</th>
+               </tr>
+             </thead>
+             <tbody id="table-body"></tbody>
+           </table>
+            
+          <script src="issue.js"></script>
+            
+          </div>
+          <div class="right">
+              <div class="my-box2">
+              <h1 id="title">뉴스</h1>
+                 <table class="table table-bordered">
+             <thead>
+               <tr class="bg-info">
+                 <th>뉴스기사</th>
+                 <th>내용</th>
+                 <th>링크</th>
+                 
+               </tr>
+             </thead>
+             <tbody id="tablenews-body"></tbody>
+           </table>
+            
+          <script src="news.js"></script>
+
+              </div>
+
+                
+          </div>
+        </div>
+      </div>
+
+      <hr>
+		
+
+    
+    </div> <!-- /container -->
+  <footer>
+        <p>&copy; 조선대캡스톤H조 2021</p>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
