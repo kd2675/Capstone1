@@ -25,7 +25,7 @@ count = Counter(message_N)
 
 word_count = dict()
 for tag, counts in count.most_common(80):
-    if counts < 10:
+    if counts < 25:
         tag = " "
     if(len(str(tag))>1):
         word_count[tag] = counts
@@ -38,5 +38,3 @@ with open('2)%s_search_%s.json' % ('이슈', 'news'), 'w', encoding='utf8') as o
         jsonFile = json.dumps(jsonResult, indent = 4, sort_keys = True, ensure_ascii = False)
 
         outfile.write(jsonFile)
-
-

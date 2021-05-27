@@ -31,8 +31,8 @@ client_id = '97avHwhY7N2bJ4RysxAx'
 client_secret = '74r7XpIXPi'
 
 
-startDate = "2021-03-01"
-endDate = "2021-03-31"
+startDate = "2021-05-27"
+endDate = "2021-05-27"
 timeUnit = 'date'
 device = ''
 ages = []
@@ -98,60 +98,20 @@ class NaverDataLabOpenAPI():
             result = json.loads(response.read())
             
             df = pd.DataFrame(result['results'][0]['data'])[['period']]
+            ratio=[]
             for i in range(len(self.keywordGroups)):
-                tmp = pd.DataFrame(result['results'][i]['data'])
-                tmp = tmp.rename(columns={'ratio': result['results'][i]['title']})
-                df = pd.merge(df, tmp, how='left', on=['period'])
-                js = tmp.to_json(orient = 'columns')
-                jsonResult.append({'result':js})
-            self.df = df.rename(columns={'period': '날짜'})
+                for b in result['results'][i]['data']:
+                    ratio.append(b['ratio'])
+                
+            jsonResult.append({'title':tag, 'result':ratio})
+            self.df = df
             
             
         else:
             print("Error Code:" + rescode)
             
         return self.df
-    
-    """def plot_daily_trend(self):
-        
-        #일 별 검색어 트렌드 그래프 출력
-        
-        colList = self.df.columns[1:]
-        n_col = len(colList)
 
-        fig = plt.figure(figsize=(12,6))
-        plt.title('일 별 검색어 트렌드', size=20, weight='bold')
-        for i in range(n_col):
-            sns.lineplot(x=self.df['날짜'], y=self.df[colList[i]], label=colList[i])
-        plt.legend(loc='upper right')
-        
-        return fig
-    
-    def plot_monthly_trend(self):
-        
-        #월 별 검색어 트렌드 그래프 출력
-        
-        df = self.df.copy()
-        df_0 = df.groupby(by=[df['날짜'].dt.year, df['날짜'].dt.month]).mean().droplevel(0).reset_index().rename(columns={'날짜': '월'})
-        df_1 = df.groupby(by=[df['날짜'].dt.year, df['날짜'].dt.month]).mean().droplevel(1).reset_index().rename(columns={'날짜': '년도'})
-
-        df = pd.merge(df_1[['년도']], df_0, how='left', left_index=True, right_index=True)
-        df['날짜'] = pd.to_datetime(df[['년도','월']].assign(일=1).rename(columns={"년도": "year", "월":'month','일':'day'}))
-        
-        colList = df.columns.drop(['날짜','년도','월'])
-        n_col = len(colList)
-                
-        fig = plt.figure(figsize=(12,6))
-        plt.title('월 별 검색어 트렌드', size=20, weight='bold')
-        for i in range(n_col):
-            sns.lineplot(x=df['날짜'], y=df[colList[i]], label=colList[i])
-        plt.legend(loc='upper right')
-        
-        return fig
-        return fig_list
-        
-    """
-    
             
         
 # 데이터 프레임 정의
@@ -163,26 +123,26 @@ data = json.loads(open(inputFileName+'.json', 'r', encoding ='utf-8').read())
 message = ''
 for item in data:
     if 'title' in item.keys():
-        message = message+re.sub(r'[^\w]',' ',item['title'])+''
+        message = message+re.sub(r'[^\w]'," ",item['title'])+' '
 nlp = Okt()
 message_N = nlp.nouns(message)
-
-
-count = Counter(message_N)
-
-
+tag1 = ''
 for tag in message_N:
-    if tag == '':
-        tag = ""
+    tag1 = tag
+for tag in message_N:
+    
     if(len(str(tag))>1):
         naver = NaverDataLabOpenAPI(client_id=client_id, client_secret=client_secret)
-        print("%s" % (tag))
+        print("%s"%(tag))
         
         keyword_group_set = {
-            'keyword_group_1': {'groupName': tag, 'keywords': [tag]},
+            'keyword_group_1': {'groupName': tag1, 'keywords': [tag1]},
+            'keyword_group_2': {'groupName': tag, 'keywords': [tag]},
         }
+        
         naver.add_keyword_groups(keyword_group_set['keyword_group_1'])
-        jsonResult.append({'title':tag})
+        naver.add_keyword_groups(keyword_group_set['keyword_group_2'])
+       
         df = naver.get_data(startDate, endDate, timeUnit, device, ages, gender)
         
         
