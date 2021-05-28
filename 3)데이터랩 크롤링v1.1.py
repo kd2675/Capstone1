@@ -102,6 +102,13 @@ class NaverDataLabOpenAPI():
             for i in range(len(self.keywordGroups)):
                 for b in result['results'][i]['data']:
                     ratio.append(b['ratio'])
+                    if(i==0):
+                        ratio_result1 = ratio[i]
+                    if(i==1):
+                        ratio_result2 = ratio[i]
+                        print(ratio_result2)
+            ratio_result = ratio_result1 - ratio_result2
+            
                 
             jsonResult.append({'title':tag, 'result':ratio})
             self.df = df
