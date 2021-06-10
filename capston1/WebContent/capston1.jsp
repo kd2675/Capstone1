@@ -83,8 +83,8 @@
 				<table class="table" id= "userLank">
 				  <thead>
 				    <tr>
-				      <th scope="col">lank</th>
-				      <th scope="col">title</th>
+				      <th scope="col">검색어 순위</th>
+				      <th scope="col">검색어</th>
 				    </tr>
 				  </thead>
 				  

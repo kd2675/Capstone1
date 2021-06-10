@@ -1,0 +1,22 @@
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch 1)�돱�뒪 �겕濡ㅻ쭅v1.1.py",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/WebContent",
+      "program": "${workspaceFolder}/WebContent/1)�돱�뒪 �겕濡ㅻ쭅v1.1.py"
+    },
+    {
+      "name": "Launch 2)단어 카운트v1.1.py",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/WebContent",
+      "program": "${workspaceFolder}/WebContent/2)단어 카운트v1.1.py"
+    }
+  ]
+}

@@ -1,134 +1,98 @@
 [
     {
-        "result": 97.51002,
-        "title": "에듀윌"
+        "result": 99.98026,
+        "title": "유튜브"
     },
     {
-        "result": 95.73961,
-        "title": "현대"
+        "result": 99.08953,
+        "title": "주식"
     },
     {
-        "result": 94.79906,
-        "title": "게임"
+        "result": 98.60127,
+        "title": "증권"
     },
     {
-        "result": 93.53819,
-        "title": "투모로우"
+        "result": 94.41341,
+        "title": "광주"
     },
     {
-        "result": 92.38755,
-        "title": "공무원"
+        "result": 81.38958,
+        "title": "경남"
     },
     {
-        "result": 92.01787,
-        "title": "한국"
+        "result": 76.19048000000001,
+        "title": "캡스"
     },
     {
-        "result": 91.63988,
-        "title": "서울시"
+        "result": 73.68422,
+        "title": "이벤트"
     },
     {
-        "result": 89.63016999999999,
-        "title": "라인"
+        "result": 68.15287000000001,
+        "title": "교보"
     },
     {
-        "result": 84.5489,
-        "title": "한국사"
+        "result": 68.01706,
+        "title": "스마트"
     },
     {
-        "result": 83.21597,
-        "title": "라이브"
+        "result": 61.03897,
+        "title": "기업"
     },
     {
-        "result": 78.78339,
-        "title": "리스트"
+        "result": 60.9375,
+        "title": "방송"
     },
     {
-        "result": 65.33333999999999,
-        "title": "시장"
-    },
-    {
-        "result": 64.5601,
-        "title": "온라인"
-    },
-    {
-        "result": 61.08844,
-        "title": "투게더"
-    },
-    {
-        "result": 49.11033,
-        "title": "안전"
-    },
-    {
-        "result": 48.83721,
+        "result": 59.89305,
         "title": "서비스"
     },
     {
-        "result": 47.32966,
-        "title": "뮤직"
+        "result": 57.74648,
+        "title": "사업"
     },
     {
-        "result": 47.03704,
-        "title": "실시간"
+        "result": 57.74648,
+        "title": "기술"
     },
     {
-        "result": 47.03704,
-        "title": "건설"
+        "result": 49.32433,
+        "title": "온라인"
     },
     {
-        "result": 35.44019,
-        "title": "산업"
+        "result": 37.75934,
+        "title": "비대"
     },
     {
-        "result": 33.02108,
-        "title": "바이"
+        "result": 20.634929999999997,
+        "title": "운영"
     },
     {
-        "result": 30.24391,
-        "title": "체인"
+        "result": 14.285719999999998,
+        "title": "센터"
     },
     {
-        "result": 16.374269999999996,
-        "title": "블록"
-    },
-    {
-        "result": 9.20635,
-        "title": "시험"
-    },
-    {
-        "result": 5.610569999999996,
-        "title": "관리"
-    },
-    {
-        "result": 2.721090000000004,
-        "title": "애널"
+        "result": 6.832300000000004,
+        "title": "해외"
     },
     {
         "result": 0,
-        "title": "데이"
+        "title": "수수료"
     },
     {
-        "result": -13.986019999999996,
-        "title": "차트"
+        "result": -50.66667,
+        "title": "출시"
     },
     {
-        "result": -26.223780000000005,
+        "result": -53.33334,
         "title": "개최"
     },
     {
-        "result": -37.06294,
-        "title": "합격"
+        "result": -59.33334,
+        "title": "자율"
     },
     {
-        "result": -45.1049,
-        "title": "진행"
-    },
-    {
-        "result": -62.23777,
-        "title": "기념"
-    },
-    {
-        "result": -69.23077,
-        "title": "공개"
+        "result": -70,
+        "title": "주행"
     }
 ]
