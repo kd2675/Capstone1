@@ -1,2 +1,4 @@
 # Capstone
-season1 Capstone
+Capstone design 1
+
+sample demo code
